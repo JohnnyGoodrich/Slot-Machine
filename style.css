@@ -7,3 +7,14 @@ body {
     padding: 30px 300px 30px 300px;
     font-size:xx-large;
 }
+.picsWheel{
+    
+    display: grid;
+   
+    grid-auto-columns: 5%;
+    overflow: auto;
+    padding: 0 0 0 330px;
+    transition: all 500ms ease;
+
+
+}
