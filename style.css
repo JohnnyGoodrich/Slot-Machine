@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+}
+.numbers {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 300px 30px 300px;
+    font-size:xx-large;
+}
