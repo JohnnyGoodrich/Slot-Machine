@@ -7,14 +7,38 @@ body {
     padding: 30px 300px 30px 300px;
     font-size:xx-large;
 }
+.container {
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
 .picsWheel{
-    
     display: grid;
-   
     grid-auto-columns: 5%;
     overflow: auto;
-    padding: 0 0 0 330px;
+   
     transition: all 500ms ease;
-
-
+}
+.picsWheel2{
+    
+    display: grid;
+    grid-auto-columns: 5%;
+    overflow: auto;
+    padding: 0 0 0 60px;
+    transition: all 500ms ease;
+}
+.picsWheel3{
+    
+    display: grid;
+    grid-auto-columns: 5%;
+    overflow: auto;
+    padding: 0 0 0 60px;
+    transition: all 500ms ease;
+}    
+.spinBtn{
+    padding: 30px;
+}
+.allPics {
+    display: flex;
+    justify-content: center;
+    
 }
