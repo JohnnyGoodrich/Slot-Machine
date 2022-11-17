@@ -3,6 +3,7 @@ let num1 = document.querySelector(".firstNum")
 let num2 = document.querySelector(".secondNum")
 let num3 = document.querySelector(".thirdNum")
 const spinBtn = document.querySelector(".spin")
+const spinBtn2 = document.querySelector(".spin2")
 
 const pic1 = document.querySelector(".pic1")
 const pic2 = document.querySelector(".pic2")
@@ -19,6 +20,7 @@ let time = 0;
 let timerTest = 0
 let timerTest2 = 0
 let timerTest3 = 0
+let picTime = 0
 // let time=0;
 const picCount = 3;
 const picHeight = 50;
@@ -57,7 +59,6 @@ function spinNumbers(){
 }
 // spinBtn.addEventListener("click", spinNumbers)
 
-spinBtn.addEventListener("click", spin)
 var currentPic=1;
 let delta = picHeight*currentPic
 let currentPic2 = 1;
@@ -66,6 +67,7 @@ let currentPic3 = 1;
 let delta3 = picHeight*currentPic3
 
 
+// spinBtn.addEventListener("click", spin)
 function spin(){
  
     spinBtn.onclick = changePic()
@@ -126,15 +128,12 @@ function changePic2(){
             
         }
         timerTest2+=200
-        if(timerTest2===4000){
+        if(timerTest2===3000){
             clearInterval(intTimer2)
             timerTest2=0
         }
     }, 200); 
 } 
-
-
-
 
 
 
@@ -164,4 +163,73 @@ function changePic3(){
     }, 200);    
 }
 
+var pic10 = document.querySelector("pic10")
+var pic11 = document.querySelector(".pic11")
+var pic12 = document.querySelector(".pic12")
 
+const gallery = ["https://i.imgur.com/rCyJ3nK.jpg", "https://i.imgur.com/vtvGZ4I.jpg", "https://i.imgur.com/0p69VFG.jpg"]
+console.log(gallery)
+
+
+spinBtn2.addEventListener("click", spin2)
+function spin2(){
+    spinBtn2.onclick = randomPic()
+}
+
+var x = document.getElementById("container")
+var y = document.querySelector("body")
+console.log(y)
+function randomPic(){
+    const picTimer = setInterval(function(){
+        document.querySelector(".pic10").src = gallery[Math.floor(Math.random() * 3)]
+        document.querySelector(".pic11").src = gallery[Math.floor(Math.random() * 3)]
+        document.querySelector(".pic12").src = gallery[Math.floor(Math.random() * 3)]
+        picTime+=200
+        if(picTime===600){
+            clearInterval(picTimer)
+            picTime=0
+        }
+        if (picTime===0&&document.querySelector(".pic10").src===document.querySelector(".pic11").src&& document.querySelector(".pic10").src===document.querySelector(".pic12").src){
+            document.querySelector(".title").innerText= "YOU WIN!"
+            // y.style.backgroundImage.url = "https://t3.ftcdn.net/jpg/03/03/52/48/240_F_303524879_h1oC0wOJsh8uqo0aZf89lNJg7njTa5A8.jpg"
+        } else {
+            document.querySelector(".title").innerText= "Play to Win"
+        }
+    },200)  
+}
+// randomPic()
+console.log(document.querySelector(".pic10").src)
+
+// function win(){
+//     if (document.querySelector(".pic10").src===document.querySelector(".pic11").src&& document.querySelector(".pic10").src===document.querySelector(".pic12").src){
+//         document.querySelector(".title").innerText= "YOU WIN!"
+//     }
+// }
+
+
+// WEIRD MOVING TITLE
+const text = document.querySelector(".title")
+const strText = text.textContent
+const splitText = strText.split("")
+text.textContent = ""
+for(let i =0; i < splitText.length; i++){
+    text.innerHTML += "<span>"+ splitText[i] + "</span>"
+}
+let char = 0
+let timer2 = setInterval(onTick, 50)
+
+
+function onTick(){
+    const span = text.querySelectorAll('span')[char]
+    span.classList.add('fade')
+    char++
+    if(char === splitText.length){
+        complete()
+        return
+    }
+}
+
+function complete(){
+    clearInterval(timer2)
+    timer2 = null
+}
