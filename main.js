@@ -15,16 +15,29 @@ const pic6 = document.querySelector(".pic6")
 const pic7 = document.querySelector(".pic7")
 const pic8 = document.querySelector(".pic8")
 const pic9 = document.querySelector(".pic9")
-
+let time = 0;
+let timerTest = 0
+let timerTest2 = 0
+let timerTest3 = 0
+// let time=0;
 const picCount = 3;
 const picHeight = 50;
 console.log(pic1)
-// const picArray = document.querySelector(".picsWheel").children
-// const picArray2 =["https://i.imgur.com/rCyJ3nK.jpg","https://i.imgur.com/J7NYqGu.jpg","https://i.imgur.com/0p69VFG.jpg"]
-// const picArray3 = [pic1, pic2, pic3]
-// console.log(picArray3)
+// TIMER
+function timer(){
+    
+   setInterval(function(){
+        if(time<10){
+            time++
+            // console.log(time)
+        } else{
+            clearInterval(time)
+            clearInterval()
+        }
+    }, 1000);    
+}
 
-
+// SPIN NUMBERS BUTTON
 let num = 0;
 function spinNumbers(){
   
@@ -37,37 +50,35 @@ function spinNumbers(){
         num++
         // console.log(num)   
     
-    if (num1.innerHTML==num2.innerHTML && num1.innerHTML == num3.innerHTML){
+    if (num1.innerHTML == num2.innerHTML && num1.innerHTML == num3.innerHTML){
         console.log("you win")
     }
     
 }
 // spinBtn.addEventListener("click", spinNumbers)
-spinNum=1
-function spin(){
-    if (spinNum<20){
-        setInterval(changePic, 200)
-        spinNum++
-    } 
-}
+
 spinBtn.addEventListener("click", spin)
-let currentPic=1;
+var currentPic=1;
 let delta = picHeight*currentPic
 let currentPic2 = 1;
 let delta2 = picHeight*currentPic2
 let currentPic3 = 1;
 let delta3 = picHeight*currentPic3
 
+
 function spin(){
+ 
     spinBtn.onclick = changePic()
     spinBtn.onclick = changePic2()
     spinBtn.onclick = changePic3()
+    spinBtn.onclick = timer()
+    console.log(currentPic)
 
-}
+  }
+  
 
 function changePic(){
-  
-    setInterval(function(){
+    const intTimer =setInterval(function(){
       if (currentPic<3){
           pic1.style.transform += `translateY(${delta}px)`
           pic4.style.transform += `translateY(${delta}px)`
@@ -79,38 +90,56 @@ function changePic(){
             pic7.style.transform = `translateY(0)`
             currentPic=1
         }
-    }, 200);
+    timerTest+=200
+    if(timerTest===3000){
+        clearInterval(intTimer)
+        timerTest=0
+    }
+    }, 200); 
+    
 }    
-// setInterval(changePic, 200)
+
 
 
 
 function changePic2(){
-    setInterval(function(){
+    const intTimer2=setInterval(function(){
         if (currentPic2==2){
+           
             pic2.style.transform = `translateY(-50px)`
             pic5.style.transform = `translateY(-50px)`
             pic8.style.transform = `translateY(-50px)`
             currentPic2++
+            
         
         } else if (currentPic2==3){
             pic2.style.transform = `translateY(0)`
             pic5.style.transform = `translateY(0)`
             pic8.style.transform = `translateY(0)`
             currentPic2=1
+            
         } else if (currentPic2==1){    
             pic2.style.transform += `translateY(50px)`
             pic5.style.transform += `translateY(50px)`
             pic8.style.transform += `translateY(50px)`
             currentPic2++
+            
+        }
+        timerTest2+=200
+        if(timerTest2===4000){
+            clearInterval(intTimer2)
+            timerTest2=0
         }
     }, 200); 
-}
-// setInterval(changePic2, 200)
+} 
+
+
+
+
 
 
 function changePic3(){
-    setInterval(function(){
+    const intTimer3 = setInterval(function(){
         if (currentPic3==2){
             pic3.style.transform = `translateY(-50px)`
             pic6.style.transform = `translateY(-50px)`
@@ -127,6 +156,12 @@ function changePic3(){
             pic9.style.transform += `translateY(-100px)`
             currentPic3++
         }
+        timerTest3+=200
+        if(timerTest3===3000){
+            clearInterval(intTimer3)
+            timerTest3=0
+        }
     }, 200);    
 }
-// setInterval(changePic3, 200)
+
+
