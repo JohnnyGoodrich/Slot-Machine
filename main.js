@@ -216,7 +216,7 @@ function bankLoss(){
 function bankWon(){
     var bankStart = document.querySelector("#total").innerText
     var bidAmount = document.querySelector("#bidAmount").value
-    document.querySelector("#total").innerHTML = +bankStart+ +bidAmount*15
+    document.querySelector("#total").innerHTML = +bankStart+ +bidAmount*10
 }
 
 
