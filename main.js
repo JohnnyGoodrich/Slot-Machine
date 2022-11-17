@@ -162,18 +162,25 @@ function changePic3(){
         }
     }, 200);    
 }
+// EVERYTHING BEFORE THIS IS FOR OLD LAYOUT
+
 
 var pic10 = document.querySelector("pic10")
 var pic11 = document.querySelector(".pic11")
 var pic12 = document.querySelector(".pic12")
+var bidAmount = document.querySelector("#bidAmount").innerHTML
+console.log(bidAmount)
+// var total = document.querySelector(".total").innerHTML
+console.log(total)
 
-const gallery = ["https://i.imgur.com/rCyJ3nK.jpg", "https://i.imgur.com/vtvGZ4I.jpg", "https://i.imgur.com/0p69VFG.jpg"]
+const gallery = ["https://i.imgur.com/rCyJ3nK.jpg", "https://i.imgur.com/vtvGZ4I.jpg", "https://i.imgur.com/caEfCVG.jpg"]
 console.log(gallery)
 
 
 spinBtn2.addEventListener("click", spin2)
 function spin2(){
     spinBtn2.onclick = randomPic()
+    console.log(total)
 }
 
 var x = document.getElementById("container")
@@ -184,52 +191,32 @@ function randomPic(){
         document.querySelector(".pic10").src = gallery[Math.floor(Math.random() * 3)]
         document.querySelector(".pic11").src = gallery[Math.floor(Math.random() * 3)]
         document.querySelector(".pic12").src = gallery[Math.floor(Math.random() * 3)]
-        picTime+=200
-        if(picTime===600){
+        picTime+=100
+        if(picTime===1000){
             clearInterval(picTimer)
             picTime=0
         }
         if (picTime===0&&document.querySelector(".pic10").src===document.querySelector(".pic11").src&& document.querySelector(".pic10").src===document.querySelector(".pic12").src){
             document.querySelector(".title").innerText= "YOU WIN!"
-            // y.style.backgroundImage.url = "https://t3.ftcdn.net/jpg/03/03/52/48/240_F_303524879_h1oC0wOJsh8uqo0aZf89lNJg7njTa5A8.jpg"
+            bankWon()
         } else {
             document.querySelector(".title").innerText= "Play to Win"
         }
-    },200)  
-}
-// randomPic()
-console.log(document.querySelector(".pic10").src)
-
-// function win(){
-//     if (document.querySelector(".pic10").src===document.querySelector(".pic11").src&& document.querySelector(".pic10").src===document.querySelector(".pic12").src){
-//         document.querySelector(".title").innerText= "YOU WIN!"
-//     }
-// }
-
-
-// WEIRD MOVING TITLE
-const text = document.querySelector(".title")
-const strText = text.textContent
-const splitText = strText.split("")
-text.textContent = ""
-for(let i =0; i < splitText.length; i++){
-    text.innerHTML += "<span>"+ splitText[i] + "</span>"
-}
-let char = 0
-let timer2 = setInterval(onTick, 50)
-
-
-function onTick(){
-    const span = text.querySelectorAll('span')[char]
-    span.classList.add('fade')
-    char++
-    if(char === splitText.length){
-        complete()
-        return
-    }
+    },150)  
+    bankLoss()
 }
 
-function complete(){
-    clearInterval(timer2)
-    timer2 = null
+function bankLoss(){
+    
+    var bankStart = document.querySelector("#total").innerText
+    var bidAmount = document.querySelector("#bidAmount").value
+    document.querySelector("#total").innerHTML = bankStart-bidAmount
+  
 }
+function bankWon(){
+    var bankStart = document.querySelector("#total").innerText
+    var bidAmount = document.querySelector("#bidAmount").value
+    document.querySelector("#total").innerHTML = +bankStart+ +bidAmount*15
+}
+
+
