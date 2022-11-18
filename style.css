@@ -1,5 +1,5 @@
 html {
-    color: aliceblue;
+    background-color: navy;
     /* background-color:cadetblue; */
     
     /* background-image: url("https://media.istockphoto.com/id/1297494025/video/flying-in-the-hallway-in-a-retro-80s-style-with-purple-neon-nets-and-lines.jpg?s=640x640&k=20&c=DAN9qiwGmKzikc-SxFk5yfn5-kGD4wN2K0mwHajtM6E="); */
@@ -8,16 +8,19 @@ html {
     /* background-repeat: no-repeat; */
     background-size: 100% 100%;  
 
-    min-height: 50vh;
-    min-width: 90vh;
+    /* min-height: 50vh; */
+    /* min-width: 90vh; */
 }
 body {
     text-align: center;
     /* background-image: url("https://media1.giphy.com/media/U3qYN8S0j3bpK/giphy.gif?cid=790b7611fe871b40fa0879ca9ba970fe7efaf0030a17996c&rid=giphy.gif&ct=g"); */
     background-image: url("https://i.imgur.com/ZdAcDar.jpg");
+    /* background-size: 100px */
     /* background-image: url("https://wallpaperaccess.com/full/4222026.jpg"); */
-    background-size: 100% 100%;  
+    background-size: 1000px 100%;  
+    max-width: 100vh;
     background-repeat: no-repeat;
+    
    
     
     
@@ -99,19 +102,20 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 175px 100px 0 100px;
+    min-width: 900px;
 }
 .spinBtn2 {
     padding: 150px;
     
 }
 .pic10 {
-    padding: 0 0 0 20%;    
+    padding: 0 0 0 150px;    
 }
 /* .pic11 {
     padding: 0 20px 0 20px;
 } */
 .pic12 {
-    padding: 0 20% 0 0;
+    padding: 0 250px 0 0;
 }
 .spin2{
 
