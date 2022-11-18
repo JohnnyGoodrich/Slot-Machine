@@ -217,7 +217,7 @@ function bankLoss(){
     } else if (bankStart<=0){
         console.log("GAME OVER")
         bankStart=0
-        
+        gameOver()
         console.log(bankStart)
         // document.querySelector(".title").innerText= "Bankrupt! Add more to play again"
     }    
@@ -229,6 +229,6 @@ function bankWon(){
 }
 
 function gameOver(){
-    window.location.href= ""
+    window.location.href= "./gameover.html"
 }
 
