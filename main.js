@@ -180,6 +180,7 @@ console.log(gallery)
 spinBtn2.addEventListener("click", spin2)
 function spin2(){
     spinBtn2.onclick = randomPic()
+    spinBtn2.onclick = bankLoss()
     console.log(total)
 }
 
@@ -200,18 +201,26 @@ function randomPic(){
             document.querySelector(".title").innerText= "YOU WIN!"
             bankWon()
         } else {
-            document.querySelector(".title").innerText= "Play to Win"
+            document.querySelector(".title").innerText= "Spin to Win"
         }
     },150)  
-    bankLoss()
+    // bankLoss()
 }
-
+var spin2
 function bankLoss(){
-    
+
+    var bankStart = document.querySelector("#total").innerText
+    if (bankStart>0){
     var bankStart = document.querySelector("#total").innerText
     var bidAmount = document.querySelector("#bidAmount").value
     document.querySelector("#total").innerHTML = bankStart-bidAmount
-  
+    } else if (bankStart<=0){
+        console.log("GAME OVER")
+        bankStart=0
+        
+        console.log(bankStart)
+        // document.querySelector(".title").innerText= "Bankrupt! Add more to play again"
+    }    
 }
 function bankWon(){
     var bankStart = document.querySelector("#total").innerText
@@ -219,4 +228,7 @@ function bankWon(){
     document.querySelector("#total").innerHTML = +bankStart+ +bidAmount*10
 }
 
+function gameOver(){
+    window.location.href= ""
+}
 

@@ -77,7 +77,10 @@ body {
 }
 .array {
     /* background-color:cadetblue; */
-    background-size: 10px;
+    background-image: url("https://i.imgur.com/fWUkBUt.jpg");
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     justify-content: space-around;
     padding: 100px;
@@ -87,11 +90,14 @@ body {
     
 }
 .pic10 {
-    padding: 0 0 0 115px;    
+    padding: 0 0 0 150px;    
 }
 .pic11 {
-    padding: 0 10px 0 15px;
+    padding: 0 20px 0 20px;
 }
 .pic12 {
-    padding: 0 157px 0 0;
+    padding: 0 150px 0 0;
+}
+.spin2{
+
 }
