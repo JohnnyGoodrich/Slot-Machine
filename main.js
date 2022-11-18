@@ -184,7 +184,7 @@ function spin2(){
     spinBtn2.onclick = spinSound.play()
     spinBtn2.onclick = winSound.pause()
     document.querySelector(".youWin").innerHTML = "&#10024"
-    document.querySelector(".youWin2").innerHTML = "&#10024"
+    // document.querySelector(".youWin2").innerHTML = "&#10024"
     console.log(total)
 }
 
@@ -207,7 +207,7 @@ function randomPic(){
             bankWon()
         } else {
             // document.querySelector(".title").innerText= "Spin to Win"
-            console.log(picTime)
+            // console.log(picTime)
         }
     },100)  
     // bankLoss()
@@ -232,9 +232,9 @@ function bankWon(){
     var bankStart = document.querySelector("#total").innerText
     var bidAmount = document.querySelector("#bidAmount").value
     document.querySelector(".youWin").innerHTML = "YOU WIN!"
-    document.querySelector(".youWin2").innerHTML = "YOU WIN!"
+    // document.querySelector(".youWin2").innerHTML = "YOU WIN!"
     document.querySelector("#total").innerHTML = +bankStart+ +bidAmount*10
-    winSound.play()
+    // winSound.play()
 }
 
 function gameOver(){
