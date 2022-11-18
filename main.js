@@ -181,6 +181,10 @@ spinBtn2.addEventListener("click", spin2)
 function spin2(){
     spinBtn2.onclick = randomPic()
     spinBtn2.onclick = bankLoss()
+    spinBtn2.onclick = spinSound.play()
+    spinBtn2.onclick = winSound.pause()
+    document.querySelector(".youWin").innerHTML = "&#10024"
+    document.querySelector(".youWin2").innerHTML = "&#10024"
     console.log(total)
 }
 
@@ -193,17 +197,19 @@ function randomPic(){
         document.querySelector(".pic11").src = gallery[Math.floor(Math.random() * 3)]
         document.querySelector(".pic12").src = gallery[Math.floor(Math.random() * 3)]
         picTime+=100
-        if(picTime===1000){
+        if(picTime===2000){
             clearInterval(picTimer)
             picTime=0
+            spinSound.pause()
         }
         if (picTime===0&&document.querySelector(".pic10").src===document.querySelector(".pic11").src&& document.querySelector(".pic10").src===document.querySelector(".pic12").src){
-            document.querySelector(".title").innerText= "YOU WIN!"
+            document
             bankWon()
         } else {
-            document.querySelector(".title").innerText= "Spin to Win"
+            // document.querySelector(".title").innerText= "Spin to Win"
+            console.log(picTime)
         }
-    },150)  
+    },100)  
     // bankLoss()
 }
 var spin2
@@ -225,10 +231,20 @@ function bankLoss(){
 function bankWon(){
     var bankStart = document.querySelector("#total").innerText
     var bidAmount = document.querySelector("#bidAmount").value
+    document.querySelector(".youWin").innerHTML = "YOU WIN!"
+    document.querySelector(".youWin2").innerHTML = "YOU WIN!"
     document.querySelector("#total").innerHTML = +bankStart+ +bidAmount*10
+    winSound.play()
 }
 
 function gameOver(){
     window.location.href= "./gameover.html"
 }
 
+const spinSound = new Audio()
+spinSound.src = "./spinner-sound-36693.mp3"
+// spinSound.src = "./slot-machine-102137.mp3"
+spinSound.volume = .02
+const winSound = new Audio ()
+winSound.src = "./slot-machine-102137.mp3"
+winSound.volume = .02
