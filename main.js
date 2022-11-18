@@ -234,7 +234,7 @@ function bankWon(){
     document.querySelector(".youWin").innerHTML = "YOU WIN!"
     // document.querySelector(".youWin2").innerHTML = "YOU WIN!"
     document.querySelector("#total").innerHTML = +bankStart+ +bidAmount*10
-    // winSound.play()
+    winSound.play()
 }
 
 function gameOver(){
