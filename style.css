@@ -6,7 +6,9 @@ html {
     /* background-image: url("https://c4.wallpaperflare.com/wallpaper/559/103/755/stars-fantasy-city-art-starry-wallpaper-preview.jpg"); */
     /* background-image: url("https://media2.giphy.com/media/ygAaR0n5RsyAM/giphy.gif?cid=790b761187abe34ee2002fa7d567db2be819a6f219b6de6f&rid=giphy.gif&ct=g") */
     /* background-repeat: no-repeat; */
-    background-size: 100% 100%;  
+    /* background-size: 100% 100%;   */
+    
+    ;
 
     /* min-height: 50vh; */
     /* min-width: 90vh; */
@@ -20,6 +22,7 @@ body {
     background-size: 1000px 850px;  
     max-width: 1000px;
     background-repeat: no-repeat;
+
 }
 .youWin {
     /* text-indent: 9000px; */
@@ -28,21 +31,23 @@ body {
     padding: 50px;
     font-size: xx-large;
     color: goldenrod;
+    font-family: 'Russo One', sans-serif;
+
 }
 .youWin2 {
-    
+
 }
 
-#container{
-    max-width: 1000px;
+/* #container{
+    max-width: 1000px; */
     /* background-image: url("https://i.imgur.com/xr54u9z.png"); */
     
-    background-size: 100px;
+    /* background-size: 100px;
     background-repeat:no-repeat;
     background-position: center;
     background-position-y: -180px;
 
-}
+} */
 .title {
     color: aliceblue;
     font-size: 4rem;
@@ -86,6 +91,8 @@ body {
 .spinBtn{
     padding: 50px;
 }
+
+
 .allPics {
     display: flex;
     justify-content: center;
@@ -106,6 +113,9 @@ body {
 .spinBtn2 {
     padding: 150px;
     color: aliceblue;
+    font-family: 'Russo One', sans-serif;
+    font-size: x-large;
+
     
 }
 .pic10 {
@@ -118,8 +128,19 @@ body {
     padding: 0 250px 0 0;
 }
 .spin2{
-
+    font-family: 'Russo One', sans-serif;
+    font-size: x-large;
+    border-radius: 15px;
+    background-color: red;
+    color: aliceblue;
 }
 .spinSound {
     text-indent: 9000px;
+}
+.dice {
+    color: lightgreen;
+    font-size: x-large;
+}
+.number{
+    width: 10px;
 }
