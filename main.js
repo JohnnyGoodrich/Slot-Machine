@@ -173,7 +173,7 @@ console.log(bidAmount)
 // var total = document.querySelector(".total").innerHTML
 console.log(total)
 
-const gallery = ["https://i.imgur.com/rCyJ3nK.jpg", "https://i.imgur.com/vtvGZ4I.jpg", "https://i.imgur.com/caEfCVG.jpg"]
+const gallery = ["https://i.imgur.com/rCyJ3nK.jpg", "https://i.imgur.com/vtvGZ4I.jpg", "https://i.imgur.com/caEfCVG.jpg", "https://i.imgur.com/8QtX5UF.jpg"]
 console.log(gallery)
 
 
@@ -193,9 +193,9 @@ var y = document.querySelector("body")
 console.log(y)
 function randomPic(){
     const picTimer = setInterval(function(){
-        document.querySelector(".pic10").src = gallery[Math.floor(Math.random() * 3)]
-        document.querySelector(".pic11").src = gallery[Math.floor(Math.random() * 3)]
-        document.querySelector(".pic12").src = gallery[Math.floor(Math.random() * 3)]
+        document.querySelector(".pic10").src = gallery[Math.floor(Math.random() * 4)]
+        document.querySelector(".pic11").src = gallery[Math.floor(Math.random() * 4)]
+        document.querySelector(".pic12").src = gallery[Math.floor(Math.random() * 4)]
         picTime+=100
         if(picTime===2000){
             clearInterval(picTimer)
@@ -242,7 +242,8 @@ function gameOver(){
 }
 
 const spinSound = new Audio()
-spinSound.src = "./spinner-sound-36693.mp3"
+// spinSound.src = "./spinner-sound-36693.mp3"
+spinSound.src = "./spinner sound longest.mp3"
 // spinSound.src = "./slot-machine-102137.mp3"
 spinSound.volume = .02
 const winSound = new Audio ()
