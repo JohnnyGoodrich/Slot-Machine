@@ -1,31 +1,16 @@
 html {
     background-color:black;
-    /* background-color:cadetblue; */
-    
-    /* background-image: url("https://media.istockphoto.com/id/1297494025/video/flying-in-the-hallway-in-a-retro-80s-style-with-purple-neon-nets-and-lines.jpg?s=640x640&k=20&c=DAN9qiwGmKzikc-SxFk5yfn5-kGD4wN2K0mwHajtM6E="); */
-    /* background-image: url("https://c4.wallpaperflare.com/wallpaper/559/103/755/stars-fantasy-city-art-starry-wallpaper-preview.jpg"); */
-    /* background-image: url("https://media2.giphy.com/media/ygAaR0n5RsyAM/giphy.gif?cid=790b761187abe34ee2002fa7d567db2be819a6f219b6de6f&rid=giphy.gif&ct=g") */
-    /* background-repeat: no-repeat; */
-    /* background-size: 100% 100%;   */
-    
-    ;
 
-    /* min-height: 50vh; */
-    /* min-width: 90vh; */
 }
 body {
     text-align: center;
-    /* background-image: url("https://media1.giphy.com/media/U3qYN8S0j3bpK/giphy.gif?cid=790b7611fe871b40fa0879ca9ba970fe7efaf0030a17996c&rid=giphy.gif&ct=g"); */
     background-image: url("https://i.imgur.com/ZdAcDar.jpg");
-    /* background-size: 100px */
-    /* background-image: url("https://wallpaperaccess.com/full/4222026.jpg"); */
     background-size: 1000px 850px;  
     max-width: 1000px;
     background-repeat: no-repeat;
 
 }
 .youWin {
-    /* text-indent: 9000px; */
     display: flex;
     justify-content: space-between;
     padding: 50px;
@@ -38,16 +23,6 @@ body {
 
 }
 
-/* #container{
-    max-width: 1000px; */
-    /* background-image: url("https://i.imgur.com/xr54u9z.png"); */
-    
-    /* background-size: 100px;
-    background-repeat:no-repeat;
-    background-position: center;
-    background-position-y: -180px;
-
-} */
 .title {
     color: aliceblue;
     font-size: 4rem;
@@ -61,19 +36,14 @@ body {
     padding: 30px 300px 30px 300px;
     font-size:xx-large;
 }
-.container {
-    /* display: flex; */
-    /* justify-content: space-between; */
-}
+
 .picsWheel{
     display: grid;
     grid-auto-columns: 5%;
     overflow: auto;
-   
     transition: all 500ms ease;
 }
 .picsWheel2{
-    
     display: grid;
     grid-auto-columns: 5%;
     overflow: auto;
@@ -81,7 +51,6 @@ body {
     transition: all 500ms ease;
 }
 .picsWheel3{
-    
     display: grid;
     grid-auto-columns: 5%;
     overflow: auto;
@@ -100,8 +69,6 @@ body {
     
 }
 .array {
-    /* background-color:cadetblue; */
-    /* background-image: url("https://i.imgur.com/fWUkBUt.jpg"); */
     background-size: 600px;
     background-repeat: no-repeat;
     background-position: center;
@@ -115,16 +82,12 @@ body {
     color: aliceblue;
     font-family: 'Russo One', sans-serif;
     font-size: x-large;
-    
-
-    
 }
+
 .pic10 {
     padding: 0 0 0 150px;    
 }
-/* .pic11 {
-    padding: 0 20px 0 20px;
-} */
+
 .pic12 {
     padding: 0 250px 0 0;
 }
@@ -132,11 +95,9 @@ body {
     font-family: 'Russo One', sans-serif;
     font-size: x-large;
     border-radius: 15px;
+  
     background-color: red;
     color: aliceblue;
-}
-.spinSound {
-    text-indent: 9000px;
 }
 .dice {
     color: lightgreen;
@@ -144,4 +105,9 @@ body {
 }
 .number{
     width: 10px;
+}
+input[type=number]{
+    width: 75px;
+    height: 25px;
+    border-radius: 10px;
 }
