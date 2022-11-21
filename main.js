@@ -17,7 +17,7 @@ function spin2(){
     spinBtn2.onclick = spinSound.play()
     spinBtn2.onclick = winSound.pause()
     document.querySelector(".youWin").innerHTML = "&#10024"
-    // document.querySelector(".youWin2").innerHTML = "&#10024"
+ 
   
 }
 
