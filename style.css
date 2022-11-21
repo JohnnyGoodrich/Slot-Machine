@@ -5,7 +5,7 @@ html {
 body {
     text-align: center;
     background-image: url("https://i.imgur.com/ZdAcDar.jpg");
-    background-size: 1000px 850px;  
+    background-size: 1000px 1000px;  
     max-width: 1000px;
     background-repeat: no-repeat;
 
@@ -37,14 +37,15 @@ body {
     background-position: center;
     display: flex;
     justify-content: space-around;
-    padding: 200px 100px 0 100px;
+    padding: 270px 100px 0 100px;
     min-width: 900px;
 }
 .spinBtn2 {
-    padding: 150px;
+    padding: 200px;
     color: aliceblue;
     font-family: 'Russo One', sans-serif;
     font-size: x-large;
+    min-width: 600px;
 }
 
 .pic10 {
