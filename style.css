@@ -1,13 +1,18 @@
 html {
-    background-color:black;
+    /* background-color:black; */
+    text-align: center;
+    background-image: url("https://i.imgur.com/ZdAcDar.jpg");
+    background-size: 100% 100%;
+    min-width: 900px;
+    background-repeat: no-repeat;
  
 }
 body {
     text-align: center;
-    background-image: url("https://i.imgur.com/ZdAcDar.jpg");
-    background-size: 1000px 1000px;  
-    max-width: 1000px;
-    background-repeat: no-repeat;
+    /* background-image: url("https://i.imgur.com/ZdAcDar.jpg");
+    background-size: 100% 100%;
+   
+    background-repeat: no-repeat; */
 
 }
 .youWin {
@@ -17,35 +22,28 @@ body {
     font-size: xx-large;
     color: goldenrod;
     font-family: 'Russo One', sans-serif;
-
-}
-
-.spinBtn{
-    padding: 50px;
 }
 
 
 .allPics {
     display: flex;
     justify-content: center;
-    
-    
 }
 .array {
-    background-size: 600px;
+    /* background-size: 600px; */
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     justify-content: space-around;
-    padding: 270px 100px 0 100px;
-    min-width: 900px;
+    padding: 210px 0 0 100px;
+    /* min-width: 900px; */
 }
 .spinBtn2 {
-    padding: 200px;
+    padding: 150px;
     color: aliceblue;
     font-family: 'Russo One', sans-serif;
     font-size: x-large;
-    min-width: 600px;
+    /* min-width: 600px; */
 }
 
 .pic10 {
@@ -59,7 +57,6 @@ body {
     font-family: 'Russo One', sans-serif;
     font-size: x-large;
     border-radius: 15px;
-  
     background-color: red;
     color: aliceblue;
 }
@@ -74,4 +71,9 @@ input[type=number]{
     width: 75px;
     height: 25px;
     border-radius: 10px;
+}
+@media  screen (max-width: 600px){
+    div.img.pic10{
+        max-width: 100px;
+    }
 }
