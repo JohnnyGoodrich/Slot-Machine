@@ -1,6 +1,6 @@
 html {
     background-color:black;
-
+ 
 }
 body {
     text-align: center;
@@ -19,44 +19,7 @@ body {
     font-family: 'Russo One', sans-serif;
 
 }
-.youWin2 {
 
-}
-
-.title {
-    color: aliceblue;
-    font-size: 4rem;
-    font-family: sans-serif;
-    
-}
-
-.numbers {
-    display: flex;
-    justify-content: space-around;
-    padding: 30px 300px 30px 300px;
-    font-size:xx-large;
-}
-
-.picsWheel{
-    display: grid;
-    grid-auto-columns: 5%;
-    overflow: auto;
-    transition: all 500ms ease;
-}
-.picsWheel2{
-    display: grid;
-    grid-auto-columns: 5%;
-    overflow: auto;
-    padding: 0 0 0 60px;
-    transition: all 500ms ease;
-}
-.picsWheel3{
-    display: grid;
-    grid-auto-columns: 5%;
-    overflow: auto;
-    padding: 0 0 0 60px;
-    transition: all 500ms ease;
-}    
 .spinBtn{
     padding: 50px;
 }
