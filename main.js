@@ -2,10 +2,10 @@
 
 const spinBtn2 = document.querySelector(".spin2")
 let picTime = 0
-var pic10 = document.querySelector("pic10")
-var pic11 = document.querySelector(".pic11")
-var pic12 = document.querySelector(".pic12")
-var bidAmount = document.querySelector("#bidAmount").innerHTML
+let pic10 = document.querySelector("pic10")
+let pic11 = document.querySelector(".pic11")
+let pic12 = document.querySelector(".pic12")
+let bidAmount = document.querySelector("#bidAmount").innerHTML
 const gallery = ["https://i.imgur.com/rCyJ3nK.jpg", "https://i.imgur.com/vtvGZ4I.jpg", "https://i.imgur.com/caEfCVG.jpg", "https://i.imgur.com/vdTuUFS.jpg"]
 
 //FUNCTIONS
@@ -41,10 +41,10 @@ function randomPic(){
 
 // WIN AND LOSS FUNCTIONS
 function bankLoss(){
-    var bankStart = document.querySelector("#total").innerText
+    let bankStart = document.querySelector("#total").innerText
     if (bankStart>0){
-    var bankStart = document.querySelector("#total").innerText
-    var bidAmount = document.querySelector("#bidAmount").value
+    let bankStart = document.querySelector("#total").innerText
+    let bidAmount = document.querySelector("#bidAmount").value
     document.querySelector("#total").innerHTML = bankStart-bidAmount
     } else if (bankStart<=0){
         bankStart=0
@@ -52,8 +52,8 @@ function bankLoss(){
     }    
 }
 function bankWon(){
-    var bankStart = document.querySelector("#total").innerText
-    var bidAmount = document.querySelector("#bidAmount").value
+    let bankStart = document.querySelector("#total").innerText
+    let bidAmount = document.querySelector("#bidAmount").value
     document.querySelector(".youWin").innerHTML = "YOU WIN!"
     document.querySelector("#total").innerHTML = +bankStart+ +bidAmount*10
     winSound.play()
